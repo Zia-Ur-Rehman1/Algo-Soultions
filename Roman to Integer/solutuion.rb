@@ -13,7 +13,7 @@ def roman_to_int(s)
   i=0
   s= s.split('')
   while i < length
-    if hash[s[i+1]&.to_sym] && hash[s[i].to_sym] < hash[s[i+1]&.to_sym]
+    if i+1 < length && hash[s[i].to_sym] < hash[s[i+1]&.to_sym]
       sum -= hash[s[i].to_sym] 
     else
       sum += hash[s[i].to_sym]
